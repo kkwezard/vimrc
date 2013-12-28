@@ -1,8 +1,23 @@
+" let <backspace> can delete initial tab
+set backspace=indent,eol,start
+
+" Syntax highlight
+syntax on
+
+" Font
+if has("win32")
+    set guifont=consolas:h11
+endif
+
 " Color scheme
-colorscheme default
+if has("gui")
+    colorscheme torte
+else
+    colorscheme default
+endif
 
 " Display number
-set nu
+set number
 
 " Indent related
 set autoindent
@@ -52,7 +67,7 @@ imap <F2> <C-O>:ls<cr>
 nmap <leader>w :w<cr>
 
 " Cancel all highlights
-map <silent> <leader><cr> :noh<cr>
+map <silent> <leader><cr> :nohlsearch<cr>
 
 " Switch current directory to current buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
