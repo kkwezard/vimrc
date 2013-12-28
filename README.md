@@ -1,4 +1,4 @@
 vimrc
 =====
 
-My .vimrc file, basically for non-GUI environment.
+My .vimrc file
